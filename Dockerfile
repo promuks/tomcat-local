@@ -23,6 +23,8 @@ ADD webapps /usr/local/tomcat/webapps
 # Drop the root user and make the content of /opt/app-root owned by user 1001
 RUN chown -R 1001:0 /usr/local/tomcat
 
+RUN chmod -R ug+rw /usr/local/tomcat
+
 # Set the default user for the image, the user itself was created in the base image
 USER 1001
 
