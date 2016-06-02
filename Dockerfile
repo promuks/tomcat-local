@@ -31,11 +31,8 @@ RUN chown -R 1001:1001 /usr/local/tomcat && \
 
 RUN /usr/local/tomcat/bin/addldapcert.sh
 
-
-
 # Set the default user for the image, the user itself was created in the base image
 USER 1001
 
 
 CMD ["catalina.sh", "run"]
-
