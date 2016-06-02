@@ -25,6 +25,10 @@ RUN chown -R 1001:0 /usr/local/tomcat
 
 RUN chmod -R ug+rw /usr/local/tomcat
 
+RUN chmod -R ug+rwx /usr/local/tomcat/bin/addldapcert.sh
+
+RUN /usr/local/tomcat/bin/addldapcert.sh
+
 # Set the default user for the image, the user itself was created in the base image
 USER 1001
 
