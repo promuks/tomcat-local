@@ -15,6 +15,8 @@ ADD lib /usr/local/tomcat/lib
 ADD properties /usr/local/tomcat/properties
 
 ADD bin /usr/local/tomcat/bin
+ADD cert /usr/local/tomcat/certs
+
 
 #ADD db2 /usr/local/tomcat/db2
 #ADD mq /usr/local/tomcat/mq
