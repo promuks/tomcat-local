@@ -1,0 +1,1 @@
+/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/bin/keytool -import -storetype JKS -storepass changeit -alias ATPCOLDAP -file /usr/local/tomcat/certs/ldap.cert -noprompt -keystore /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security/cacerts
