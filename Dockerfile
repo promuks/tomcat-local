@@ -26,11 +26,13 @@ ADD cert /usr/local/tomcat/certs
 EXPOSE 8052
 
 # Drop the root user and make the content of /opt/app-root owned by user 1001
-RUN chown -R 1001:1001 /usr/local/tomcat && \
-    chmod -R ug+rw /usr/local/tomcat && \
-    chmod -R ug+rwx /usr/local/tomcat/bin/addldapcert.sh
+#RUN chown -R 1001:1001 /usr/local/tomcat && \
+    #chmod -R ug+rw /usr/local/tomcat && \
+    #chmod -R ug+rwx /usr/local/tomcat/bin/addldapcert.sh
 
-RUN /usr/local/tomcat/bin/addldapcert.sh
+#RUN /usr/local/tomcat/bin/addldapcert.sh
+
+RUN chown -R 1001:1001 /usr/local/tomcat
 
 # Set the default user for the image, the user itself was created in the base image
 USER 1001
