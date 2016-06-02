@@ -13,29 +13,20 @@ RUN set -x \
 ADD conf /usr/local/tomcat/conf
 ADD lib /usr/local/tomcat/lib
 ADD properties /usr/local/tomcat/properties
-ADD bin /usr/local/tomcat/bin
+
 #ADD db2 /usr/local/tomcat/db2
 #ADD mq /usr/local/tomcat/mq
 #ADD wasejb /usr/local/tomcat/wasejb
 
 ADD webapps /usr/local/tomcat/webapps
 
-ADD cert /usr/local/tomcat/certs
-
-
-EXPOSE 8052
-
 # Drop the root user and make the content of /opt/app-root owned by user 1001
-#RUN chown -R 1001:1001 /usr/local/tomcat && \
-    #chmod -R ug+rw /usr/local/tomcat && \
-    #chmod -R ug+rwx /usr/local/tomcat/bin/addldapcert.sh
-
-#RUN /usr/local/tomcat/bin/addldapcert.sh
-
 RUN chown -R 1001:1001 /usr/local/tomcat
 
 # Set the default user for the image, the user itself was created in the base image
 USER 1001
 
+
+EXPOSE 8052
 
 CMD ["catalina.sh", "run"]
