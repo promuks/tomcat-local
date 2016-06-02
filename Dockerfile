@@ -14,6 +14,8 @@ ADD conf /usr/local/tomcat/conf
 ADD lib /usr/local/tomcat/lib
 ADD properties /usr/local/tomcat/properties
 
+ADD bin /usr/local/tomcat/bin
+
 #ADD db2 /usr/local/tomcat/db2
 #ADD mq /usr/local/tomcat/mq
 #ADD wasejb /usr/local/tomcat/wasejb
