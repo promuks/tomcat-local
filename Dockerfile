@@ -1,4 +1,6 @@
-FROM tomcat:8.0.15-jre8
+#FROM tomcat:8.0.15-jre8
+
+FROM openshift/base-centos7
 
 #RUN mkdir -p /usr/local/tomcat/db2 /usr/local/tomcat/mq /usr/local/tomcat/wasejb
 
